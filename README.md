@@ -5,6 +5,10 @@
 ```bash
 git clone https://github.com/tonikny/ra-m2-usestate-useeffect.git
 ```
+- Cambiar al directorio de la aplicación:
+```bash
+cd ra-m2-usestate-useeffect/app
+```
 - Instalar dependencias:
 ```bash
 npm install
