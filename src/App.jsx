@@ -3,6 +3,7 @@ import FigureControl from './components/molecules'
 import { randomColor, randomSize } from './utils/random'
 
 function App() {
+  // Estos comentarios fuera.
   // Size management --------------------------------
   const [sizes, setSizes] = useState({
     triangle1: parseInt(randomSize(50, 150), 10),
@@ -13,6 +14,7 @@ function App() {
     setSizes({ ...sizes, [key]: Number(e.target.value) })
   }
   useEffect(() => {
+    // Crea una función allEqual y guardala en utils/helpers o en una carpeta de helpers.
     const allEqual = new Set(Object.values(sizes)).size === 1
     if (allEqual) {
       // eslint-disable-next-line no-alert, no-undef

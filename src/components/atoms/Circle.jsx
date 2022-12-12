@@ -6,6 +6,9 @@ export default function Circle({
   color = colors.main,
   size = dimensions.figure.base,
 }) {
+  // En lugar de devolver un div, devolvemos un SVG
+  // El SVG es un elemento que nos permite dibujar figuras
+  // en el navegador. En este caso, un círculo.
   return (
     <div
       style={{

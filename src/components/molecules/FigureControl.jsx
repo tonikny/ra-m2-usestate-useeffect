@@ -15,6 +15,7 @@ export default function FigureControl({
   handleClose,
   displayColorPicker = false,
 }) {
+  // Eliminar reactCSS, creo que te has complicado.
   const styles = reactCSS({
     default: {
       color: {
@@ -49,8 +50,13 @@ export default function FigureControl({
   return (
     <div style={{ margin: '50px 20px' }}>
       <div>
+        {/* En lugar de ser un span, debes crear un label que tenga la etiqueta htmlFor. Lo ideal es que este al mismo nivel que atoms y sea un componente. */}
         <span>{figure} size</span>
         <input
+          // Crearia un InputNumber y lo pondria en atoms.
+          // Lo ideal es que sea un componente.
+          // Lo mismo para color
+          // Le faltan props como id y name.
           type="number"
           value={size}
           min="1"

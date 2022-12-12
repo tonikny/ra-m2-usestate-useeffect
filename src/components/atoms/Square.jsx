@@ -6,7 +6,8 @@ export default function Square({
   color = colors.main,
   size = dimensions.figure.base,
 }) {
-  // console.log('square', color, size)
+  // console.log('square', color, size) --> Eliminar este tipo de comentarios siempre
+  // Crear un SVG en lugar de un div
   return (
     <div
       style={{
