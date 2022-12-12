@@ -7,14 +7,12 @@ export default function Triangle({
   size = dimensions.figure.base,
 }) {
   return (
-    <div
-      style={{
-        backgroundColor: color,
-        height: `${size}px`,
-        width: `${size}px`,
-        clipPath: 'polygon(0 100%, 50% 0, 100% 100%)',
-      }}
-    />
+    <svg width={size} height={size}>
+      <polygon
+        points={`0 ${size}, ${size / 2} 0,${size} ${size}`}
+        fill={color}
+      />
+    </svg>
   )
 }
 

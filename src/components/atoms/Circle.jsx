@@ -7,14 +7,9 @@ export default function Circle({
   size = dimensions.figure.base,
 }) {
   return (
-    <div
-      style={{
-        backgroundColor: color,
-        height: `${size}px`,
-        width: `${size}px`,
-        borderRadius: '50%',
-      }}
-    />
+    <svg width={size} height={size}>
+      <circle cx={size / 2} cy={size / 2} r={size / 2} fill={color} />
+    </svg>
   )
 }
 

@@ -6,15 +6,10 @@ export default function Square({
   color = colors.main,
   size = dimensions.figure.base,
 }) {
-  // console.log('square', color, size)
   return (
-    <div
-      style={{
-        backgroundColor: color,
-        height: `${size}px`,
-        width: `${size}px`,
-      }}
-    />
+    <svg width={size} height={size}>
+      <rect width={size} height={size} fill={color} />
+    </svg>
   )
 }
 

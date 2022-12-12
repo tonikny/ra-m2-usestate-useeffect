@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import FigureControl from './components/molecules'
 import { randomColor, randomSize } from './utils/random'
+import { allEqual } from './utils/helpers'
 
 function App() {
-  // Size management --------------------------------
   const [sizes, setSizes] = useState({
     triangle1: parseInt(randomSize(50, 150), 10),
     circle1: parseInt(randomSize(50, 150), 10),
@@ -13,14 +13,12 @@ function App() {
     setSizes({ ...sizes, [key]: Number(e.target.value) })
   }
   useEffect(() => {
-    const allEqual = new Set(Object.values(sizes)).size === 1
-    if (allEqual) {
+    if (allEqual(sizes)) {
       // eslint-disable-next-line no-alert, no-undef
       alert('Todas la figuras tienen el mismo tamaño')
     }
   }, [sizes])
 
-  // DisplayColorPicker management -------------------
   const [displayColorPicker, setDisplayColorPicker] = useState({
     triangle1: false,
     circle1: false,
@@ -39,7 +37,6 @@ function App() {
     })
   }
 
-  // Color management ------------------------------
   const [figColors, setFigColors] = useState({
     triangle1: randomColor(),
     circle1: randomColor(),
@@ -52,8 +49,7 @@ function App() {
     })
   }
   useEffect(() => {
-    const allEqual = new Set(Object.values(figColors)).size === 1
-    if (allEqual) {
+    if (allEqual(figColors)) {
       // eslint-disable-next-line no-alert, no-undef
       alert('Todas la figuras tienen el mismo color')
     }
