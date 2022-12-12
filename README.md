@@ -7,7 +7,7 @@ git clone https://github.com/tonikny/ra-m2-usestate-useeffect.git
 ```
 - Cambiar al directorio de la aplicación:
 ```bash
-cd ra-m2-usestate-useeffect/app
+cd ra-m2-usestate-useeffect
 ```
 - Instalar dependencias:
 ```bash
